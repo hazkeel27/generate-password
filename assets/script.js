@@ -94,8 +94,35 @@ function generatePassword()
                 parentArray.push(unfilteredParentArray[trueIndexes[index]]);
             }
 
-            
+            /*
+            - the following for loop iterates through the length of the password
+            - every iteration it goes through one of the following, lowercases, uppercases, numbers, 
+            or special characters, and then goes through them again every four rounds
+            - a random value is chosen from whichever array the loop is on
+            - the random value is concatnated to the variable 'password'
+            */
+            var parentArrayIndex = 0;
+            for (index = 0; index < length; index++)
+            {
+                var childArray = parentArray[parentArrayIndex];
+                var childArrayLength = childArray.length;
 
+                // if 'parentArray' which includes the user's choices go beyond its own length, then the if statement is called
+                if (parentArrayIndex >= (parentArray.length - 1)){
+                    //'password' variable is concatnated 
+                    password += parentArray[parentArrayIndex][Math.floor(Math.random() * childArrayLength)];
+                    parentArrayIndex = 0;
+                }
+                else{ // if 'parentArray' which includes the user's choices within its own length, then the else statement is called
+                    //'password' variable is concatnated 
+                    password += parentArray[parentArrayIndex][Math.floor(Math.random() * childArrayLength)];
+                    parentArrayIndex++;
+                }
+            }
+
+            lengthWhileLoop = false; // since we have our password we can set 'whileLoop' to false and break out of it
         }
     }
+
+    return password;
 }
