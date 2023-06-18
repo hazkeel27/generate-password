@@ -43,11 +43,11 @@ function generatePassword()
                 // if no criteria is chosen, user is alerted to choose atleast one criteria, else while loop ends
                 if (lowercase === false && uppercase === false && number === false && special === false)
                 {
-                window.alert("Choose atleast one criteria!");
+                    window.alert("Choose atleast one criteria!");
                 }
                 else
                 {
-                criteriaWhileLoop = false;
+                    criteriaWhileLoop = false;
                 }
             }
 
@@ -59,16 +59,39 @@ function generatePassword()
 
             // the following for loops use the String.fromCharCode method to concatnate values to their respectively named arrays 
             for (lowercaseCharCode = 97; lowercaseCharCode <= 122; lowercaseCharCode++){
-            lowercaseArray += String.fromCharCode(lowercaseCharCode);
+                lowercaseArray += String.fromCharCode(lowercaseCharCode);
             }
             for (uppercaseCharCode = 65; uppercaseCharCode <= 90; uppercaseCharCode++){
-            uppercaseArray += String.fromCharCode(uppercaseCharCode);
+                uppercaseArray += String.fromCharCode(uppercaseCharCode);
             }
             for (numberCharCode = 48; numberCharCode <= 57; numberCharCode++){
-            numberArray += String.fromCharCode(numberCharCode);
+                numberArray += String.fromCharCode(numberCharCode);
             }
             for (specialCharCode = 33; specialCharCode <= 47; specialCharCode++){
-            specialArray += String.fromCharCode(specialCharCode);
+                specialArray += String.fromCharCode(specialCharCode);
+            }
+
+            // the user's criteria choices are entered into the array in the order they are asked
+            var userChoiceArray = [lowercase, uppercase, number, special];
+
+            // the arrays of the criteria values are put into another array called unfitleredParentArray
+            var unfilteredParentArray = [lowercaseArray, uppercaseArray, numberArray, specialArray];
+
+            // this for loop iterates through the 'userChoiceArray' array and assigns the index number where it is 'true' to an array called 'trueIndexes'
+            var trueIndexes = [];
+            for (var index = 0; index < userChoiceArray.length; index++)
+            {
+                if (userChoiceArray[index] === true)
+                {
+                    trueIndexes.push(index);
+                }
+            }
+
+            // this for loop iterates through 'trueIndexes' array and assigns 'unfilteredParentArray' values to 'parentArray' 
+            var parentArray = [];
+            for (var index = 0; index < trueIndexes.length; index++)
+            {
+                parentArray.push(unfilteredParentArray[trueIndexes[index]]);
             }
 
             
