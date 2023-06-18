@@ -28,7 +28,8 @@ It is challenging to create a strong password on your own and also inconvenient.
 - The generate password will include minimum one character from the chosen criteria
 - Once all prompts are completed, the generated password will be displayed in the textarea
 
-
+The following image includes the screenshot of a password which includes 20 characters of lowercase, uppercase, numbers, and special characters.
+![image](https://github.com/hazkeel27/generate-password/assets/55248924/9f550493-0a93-4a68-82c9-96d9b25c413c)
 
 ## Credits
 
