@@ -50,6 +50,29 @@ function generatePassword()
                 criteriaWhileLoop = false;
                 }
             }
+
+            // These arrays store the values of lowercases, uppercases, numebers, and special characters
+            var lowercaseArray = []; // array length: 0-25
+            var uppercaseArray = []; // array length: 0-25
+            var numberArray = []; // array length: 0-9
+            var specialArray = []; // array length: 0-14
+
+            // the following for loops use the String.fromCharCode method to concatnate values to their respectively named arrays 
+            for (lowercaseCharCode = 97; lowercaseCharCode <= 122; lowercaseCharCode++){
+            lowercaseArray += String.fromCharCode(lowercaseCharCode);
+            }
+            for (uppercaseCharCode = 65; uppercaseCharCode <= 90; uppercaseCharCode++){
+            uppercaseArray += String.fromCharCode(uppercaseCharCode);
+            }
+            for (numberCharCode = 48; numberCharCode <= 57; numberCharCode++){
+            numberArray += String.fromCharCode(numberCharCode);
+            }
+            for (specialCharCode = 33; specialCharCode <= 47; specialCharCode++){
+            specialArray += String.fromCharCode(specialCharCode);
+            }
+
+            
+
         }
     }
 }
