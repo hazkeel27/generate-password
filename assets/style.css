@@ -1,9 +1,11 @@
+/*border box size is edited, in this case the card class*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/*default values of the following tags and class*/
 html,
 body,
 .wrapper {
@@ -12,17 +14,20 @@ body,
   padding: 0;
 }
 
+/*body tag's font and colour are edited*/
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
+/*padding is applied to first div or wrapper class*/
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+/*visuals are applied to the main header or h1*/
 header {
   text-align: center;
   padding: 20px;
@@ -30,6 +35,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/*visuals are applied to the card class*/
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -42,6 +48,7 @@ header {
   padding: 30px 40px;
 }
 
+/*visuals are applied to the class card-header's pseudo element*/
 .card-header::after {
   content: " ";
   display: block;
@@ -50,14 +57,17 @@ header {
   height: 2px;
 }
 
+/*visuals applied to the text area or class card-body*/
 .card-body {
   min-height: 100px;
 }
 
+/*visuals appplied to the class card.footer*/
 .card-footer {
   text-align: center;
 }
 
+/*visuals appplied to the class card.footer pseudo element*/
 .card-footer::before {
   content: " ";
   display: block;
@@ -66,12 +76,14 @@ header {
   height: 2px;
 }
 
+/*visuals appplied to the class card.footer pseudo element*/
 .card-footer::after {
   content: " ";
   display: block;
   clear: both;
 }
 
+/*visuals are applied to the button for generating password*/
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -97,6 +109,7 @@ button[disabled] {
   float: right;
 }
 
+/*visuals applied to the text area*/
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +131,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/*media query for max width of 690px*/
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -130,6 +144,7 @@ button[disabled] {
   }
 }
 
+/*media query for max width of 500px*/
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
