@@ -32,6 +32,10 @@ It is challenging to create a strong password on your own and also inconvenient.
 
 ## Credits
 
+This link is to the github repository which inlcuded the starter code for the javascript file. The repository included the completed html and css files.
+https://github.com/coding-boot-camp/friendly-parakeet
+
+Following are the doucmentations I used to help me write the javascript code to generate password:
 - https://www.w3schools.com/jsref/jsref_indexof_array.asp
 - https://www.w3schools.com/jsref/jsref_filter.asp
 - https://www.ssec.wisc.edu/~tomw/java/unicode.html
